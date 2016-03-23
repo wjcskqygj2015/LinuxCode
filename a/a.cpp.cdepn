@@ -1,0 +1,20 @@
+F {int main()} {a.cpp:38}
+C {int main()} {a.cpp:52} {void ProfilerStop()}
+C {int main()} {a.cpp:52} {unsigned int sleep(unsigned int)}
+C {int main()} {a.cpp:52} {int __builtin_puts(const char*)}
+C {int main()} {a.cpp:52} {int printf(const char*, ...)}
+C {int main()} {a.cpp:52} {int smartComputing(int, int)}
+C {int main()} {a.cpp:52} {int printf(const char*, ...)}
+C {int main()} {a.cpp:52} {int stupidComputing(int, int)}
+C {int main()} {a.cpp:52} {int printf(const char*, ...)}
+C {int main()} {a.cpp:52} {__pid_t getpid()}
+C {int main()} {a.cpp:52} {int ProfilerStart(const char*)}
+C {int main()} {a.cpp:52} {unsigned int sleep(unsigned int)}
+C {int main()} {a.cpp:52} {int __builtin_puts(const char*)}
+F {int smartComputing(int, int)} {a.cpp:34}
+F {int stupidComputing(int, int)} {a.cpp:22}
+C {int stupidComputing(int, int)} {a.cpp:52} {void consumeSomeCPUTime2(int)}
+C {int stupidComputing(int, int)} {a.cpp:52} {void consumeSomeCPUTime1(int)}
+F {void consumeSomeCPUTime2(int)} {a.cpp:13}
+C {void consumeSomeCPUTime2(int)} {a.cpp:52} {void consumeSomeCPUTime1(int)}
+F {void consumeSomeCPUTime1(int)} {a.cpp:5}

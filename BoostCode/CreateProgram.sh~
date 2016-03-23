@@ -1,0 +1,2 @@
+mkdir $1
+ln -s ../RunProgram.sh ./

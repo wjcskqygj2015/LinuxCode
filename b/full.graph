@@ -1,0 +1,26 @@
+digraph fullgraph {
+node [ fontname=Helvetica, fontsize=12 ];
+"main" [label="main\nb.cpp:3:"];
+"std::flush(std::basic_ostream<_CharT,_Traits>&)" -> "std::basic_ostream<_CharT,_Traits>::flush()" [label="b.cpp:7"];
+"std::endl(std::basic_ostream<_CharT,_Traits>&)" -> "std::flush(std::basic_ostream<_CharT,_Traits>&)" [label="b.cpp:7"];
+"std::operator<<(std::basic_ostream<char,_Traits>&,const char*)" -> "std::basic_ios<_CharT,_Traits>::setstate(std::ios_base::iostate)" [label=""];
+"std::basic_ios<_CharT,_Traits>::setstate(std::ios_base::iostate)" -> "std::operator|(std::_Ios_Iostate,std::_Ios_Iostate)" [label="b.cpp:7"];
+"main()" -> "std::operator<<(std::basic_ostream<char,_Traits>&,const char*)" [label="b.cpp:7"];
+"std::endl(std::basic_ostream<_CharT,_Traits>&)" -> "std::basic_ostream<_CharT,_Traits>::put(std::basic_ostream<_CharT,_Traits>::char_type)" [label="b.cpp:7"];
+"const char* std::ctype<char>::do_widen(const char*,const char*,std::ctype<char>::char_type*) const" -> "__builtin_memcpy(void*,const void*,long unsigned int)" [label=""];
+"_Facet& std::__check_facet(const _Facet*)" -> "std::__throw_bad_cast()" [label=""];
+"__static_initialization_and_destruction_0(int,int)" -> "std::ios_base::Init::Init()" [label="b.cpp:7"];
+"std::basic_ios<_CharT,_Traits>::setstate(std::ios_base::iostate)" -> "std::basic_ios<_CharT,_Traits>::rdstate() const" [label="b.cpp:7"];
+"std::operator<<(std::basic_ostream<char,_Traits>&,const char*)" -> "std::size_t std::char_traits<char>::length(const char_type*)" [label=""];
+"std::endl(std::basic_ostream<_CharT,_Traits>&)" -> "std::basic_ios<_CharT,_Traits>::widen(char) const" [label="b.cpp:7"];
+"initializers for b.cpp)" -> "__static_initialization_and_destruction_0(int,int)" [label=""];
+"main()" -> "std::basic_ostream<_CharT,_Traits>::operator<<(std::basic_ostream<_CharT,_Traits>::__ostream_type& (*)(std::basic_ostream<_CharT,_Traits>::__ostream_type&))" [label="b.cpp:7"];
+"const" -> "std::ctype<char>::_M_widen_init() const" [label="b.cpp:7"];
+"std::basic_ios<_CharT,_Traits>::widen(char) const" -> "const" [label=""];
+"__static_initialization_and_destruction_0(int,int)" -> "__cxa_atexit(void (*)(void*),void*,void*)" [label="b.cpp:7"];
+"std::operator<<(std::basic_ostream<char,_Traits>&,const char*)" -> "std::__ostream_insert(std::basic_ostream<_CharT,_Traits>&,const _CharT*,std::streamsize)" [label=""];
+"std::basic_ios<_CharT,_Traits>::setstate(std::ios_base::iostate)" -> "std::basic_ios<_CharT,_Traits>::clear(std::ios_base::iostate)" [label="b.cpp:7"];
+"std::basic_ios<_CharT,_Traits>::widen(char) const" -> "_Facet& std::__check_facet(const _Facet*)" [label=""];
+"const char_type* std::ctype<char>::do_narrow(const char_type*,const char_type*,char,char*) const" -> "__builtin_memcpy(void*,const void*,long unsigned int)" [label=""];
+"std::size_t std::char_traits<char>::length(const char_type*)" -> "unsigned int __builtin_strlen(const char*)" [label=""];
+}

@@ -1,0 +1,14 @@
+#include<boost/utility/addressof.hpp>
+#include<iostream>
+#include<string>
+#include<cassert>
+using namespace std;
+using namespace boost;
+int main(int argc, char** argv)
+{
+	int i=0;
+	string s;
+	assert(&i==addressof(i));
+	assert(&s==addressof(s));
+	return 0;
+}
